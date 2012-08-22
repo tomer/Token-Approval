@@ -11,29 +11,30 @@ urchinTracker();
 <!-- /Google -->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content=
-"Humanized token - Tomer Cohen 2006">
+<meta name="generator" content="Humanized token - Tomer Cohen 2006">
 <title>מוזילה ישראל</title>
 
 <style type="text/css">
-body {direction: rtl;}
-#content {border: 1px solid #ccc; background: #eee; }
-#box  {width: 80%; margin-left: auto; margin-right: auto;border: 2px solid #aaa;}
+body {direction: rtl; width: 80%; margin: 5em auto 0 auto;}
+/*#content {border: 1px solid #ccc; background: #eee; }*/
+/*#box  {width: 80%; margin-left: auto; margin-right: auto;border: 2px solid #aaa;}*/
 #links {border: 1px solid #bbf; background: #ddf; text-align: center;}
-h1 {text-align: center;}
-nonscript {color: red;}
-#credit {direction: ltr;}
-#redirect {visibility: hidden;}
+h1 {text-align: center; font-family: sans-serif; color: #99f}
+noscript {color: red; font-size: 200%;}
+#credit {direction: ltr; visibility: hidden;}
+#redirect {visibility: hidden; text-align: center;}
 #null {display: none;}
+#progress {background: url(/token/ajax-loader.gif) no-repeat center; width: 32px; height: 32px; margin: auto;}
 </style>
 <script language="JavaScript">
 function main()
 {
-  createCookie ("mozoil_token", "hashpa", 30);
+  createCookie ("mozoil_token", "hashpa2", 30);
   document.getElementById('redirect').style.visibility = "visible";
   
-  if (readCookie("mozoil_token")=="hashpa") 
+  if (readCookie("mozoil_token")=="hashpa2") 
     window.setTimeout ("refresh (true);", 100);
+//	refresh();
   else 
 //    alert ("Cookies disabled." + readCookie ("mozoil_token"));
     window.setTimeout ("main();", 250);
@@ -62,7 +63,6 @@ function refresh()
 <!--
 function refresh()
 {    
-
   window.location.reload( false );
 }
 //-->
@@ -99,21 +99,9 @@ function eraseCookie(name) {
 </script>
 </head>
 <body onload="main()">
-<div id="box">
-<div id="content">
-<h1>מיד תועבר לעמוד המבוקש. אנא המתן...</h1>
-<p id="redirect">במידה ולא תועבר אוטומטית, וודא כי עוגיות מאופשרות בדפדפן וטען מחדש את העמוד.</p>
-<noscript>הדפדפן שלך איננו תומך ב־Javascript ו/או Cookies. אנא הפעל את תכונות אלו ונסה שנית.</noscript></div>
-<div id="links">
-<a href="http://mozilla.org.il">עמוד ראשי</a> |
-<a href="http://mozilla.org.il/firefox">Firefox</a> |
-<a href="http://mozilla.org.il/thunderbird">Thunderbird</a> |
-<a href="http://mozilla.org.il/seamonkey">SeaMonkey</a> |
-<a href="http://mozilla.org.il/board">הפורום</a> |
-<a href="http://mozilla.org.il/support">תמיכה</a>
-</div>
-</div>
-<div id="credit">&copy; Tomer Cohen 2006</div>
-<div id="null">B4B5E831</div>
-</body>
+<h1>מיד נעביר אותך לעמוד המבוקש. נא להמתין...</h1>
+<div id="progress"> </div>
+<p id="redirect">במידה ולא הועברת אוטומטית ליעדך, נא לוודא כי עוגיות מאופשרות בדפדפן.</p>
+<noscript>הדפדפן שלך איננו תומך ב־Javascript ו/או Cookies. נא להפעיל תכונות אלו ולנסות בשנית.</noscript></div>
+<div id="credit">&copy; Tomer Cohen 2006, 2009</div>
 </html>
