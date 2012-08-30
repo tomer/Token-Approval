@@ -29,10 +29,10 @@ noscript {color: red; font-size: 200%;}
 <script language="JavaScript">
 function main()
 {
-  createCookie ("mozoil_token", "hashpa2", 30);
+  createCookie ("mozoil_token", "letmein", 30);
   document.getElementById('redirect').style.visibility = "visible";
   
-  if (readCookie("mozoil_token")=="hashpa2") 
+  if (readCookie("mozoil_token")=="letmein") 
     window.setTimeout ("refresh (true);", 100);
 //	refresh();
   else 
