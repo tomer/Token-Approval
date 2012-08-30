@@ -1,3 +1,14 @@
+<IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{HTTP_COOKIE} !mozoil_token=letmein
-RewriteRule protect.html /admin/gateway/gateway.html [L]
+RewriteRule protect.html /token/token.html [L]
+
+#### phpbb example
+# RewriteCond %{HTTP_COOKIE} !mozoil_token=letmein
+# RewriteRule posting.php|ucp.php|report.php|mcp.php /token/index.html [L]
+
+#### MediaWiki example
+# RewriteCond %{HTTP_COOKIE} !mozoil_token=letmein
+# RewriteCond %{QUERY_STRING} title=%D7%9E%D7%99%D7%95%D7%97%D7%93:%D7%9B%D7%A0%D7%99%D7%A1%D7%94_%D7%9C%D7%97%D7%A9%D7%91%D7%95%D7%9F
+# RewriteRule index.php /token/index.html [L]
+</IfModule>
